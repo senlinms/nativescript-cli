@@ -113,7 +113,7 @@ interface IPlatformService extends NodeJS.EventEmitter {
 	 * @param {IProjectData} projectData DTO with information about the project.
 	 * @returns {void}
 	 */
-	startApplication(platform: string, runOptions: IRunPlatformOptions, projectId: string, projectName: string): Promise<void>;
+	startApplication(platform: string, runOptions: IRunPlatformOptions, appData: Mobile.IApplicationData): Promise<void>;
 
 	cleanDestinationApp(platformInfo: IPreparePlatformInfo): Promise<void>;
 	validatePlatformInstalled(platform: string, projectData: IProjectData): void;
